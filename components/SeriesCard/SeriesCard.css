@@ -1,0 +1,247 @@
+*{
+  overflow: hidden;
+  color: white;
+  z-index: 999;
+}
+.body{
+  background-color: black;
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .series-card a {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+.series-card{
+  width: 900px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 30px;
+  height: auto;
+  box-sizing:border-box;
+  border: none;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  margin: 40px 10px;
+  outline: none;
+}
+.series-card-image {
+  width: 14vw;
+  height: auto;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.SliderSeriesCard {
+  padding: 0 0;
+  width: 100vw;
+  height: auto;
+  margin: 20px;
+}
+.SliderSeriesCard .slick-list {
+   padding-left: 50px !important; 
+} /* força alinhamento à esquerda */
+.series-card-focused{
+  position: relative;
+  display: flex;
+  left: 20px;
+  border: none;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.series-card-focused img{
+  box-shadow: rgb(136, 136, 136) 5px 5px 5px 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.category-item{
+  display: none;
+}
+.category-description {
+  position: absolute;
+  font-size: 35px;
+  margin-left: 30px;
+  margin-bottom: 0px;
+}
+.viwer_background {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: 98%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.slider-container{
+  justify-content: center;
+  padding-left: 0;
+  width: 100vw;
+  margin: 0px 0;
+}
+.carrousel-all{
+  position: fixed;
+  left: 80px;
+  bottom: -30px;
+}
+.backdrop-image{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 1070px;
+  mask:
+   linear-gradient(to right, transparent, black),
+   linear-gradient(to top, transparent, black);
+   -webkit-mask-size:100% 100%;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in;
+  z-index: 1000;
+}
+.name_series{
+  width: 1050px;
+  text-align: center;
+  color: white;
+  font-size: 55px;
+  margin-left: 50px;
+}
+.series_description{
+  font-size: 22px;
+  margin-left: 60px;
+  width: 1050px;
+}
+.BarLateral{
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.series-card-loading{
+  position: absolute;
+  color: white;
+}
+.series-card-container{
+  width: 100%;
+}
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .series-card a {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+.series-card{
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 30px;
+  height: auto;
+  box-sizing:border-box;
+  border: none;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  margin: 40px 10px;
+  outline: none;
+}
+.series-card-image {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.SliderSeriesCard {
+  position: absolute;
+  bottom: 10px;
+  width: 100vw;
+  height: auto;
+  margin: 20px;
+}
+.SliderSeriesCard .slick-list {
+   padding-left: 50px !important; 
+} /* força alinhamento à esquerda */
+.series-card-focused{
+  position: relative;
+  display: flex;
+  left: 20px;
+  border: none;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.series-card-focused img{
+  box-shadow: rgb(136, 136, 136) 5px 5px 5px 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.category-item{
+  display: none;
+}
+.category-description {
+  position: absolute;
+  font-size: 35px;
+  margin-left: 30px;
+  margin-bottom: 0px;
+}
+.viwer_background {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: 98%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.slider-container{
+  justify-content: center;
+  padding-left: 0;
+  width: 100vw;
+  margin: 20px 0;
+}
+.carrousel-all{
+  position: fixed;
+  left: 80px;
+  bottom: -30px;
+}
+.backdrop-image{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 1070px;
+  mask:
+   linear-gradient(to right, transparent, black),
+   linear-gradient(to top, transparent, black);
+   -webkit-mask-size:100% 100%;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in;
+  z-index: 1000;
+}
+.name_series{
+  width: 1050px;
+  text-align: center;
+  color: white;
+  font-size: 55px;
+  margin-left: 50px;
+}
+.series_description{
+  font-size: 22px;
+  margin-left: 60px;
+  width: 1050px;
+}
+.BarLateral{
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.series-card-loading{
+  position: absolute;
+  color: white;
+}
+.series-card-container{
+  width: 100%;
+}
+}

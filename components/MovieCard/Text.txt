@@ -1,0 +1,84 @@
+import { useEffect, useRef, useState } from 'react';
+// ...restante dos imports
+
+const MovieCard = () => {
+  // ...seus states
+  const firstCategoryRef = useRef(null);
+  const firstCardRef = useRef(null);
+
+  // Foca na primeira categoria ao carregar
+  useEffect(() => {
+    if (firstCategoryRef.current) {
+      firstCategoryRef.current.focus();
+    }
+  }, [categories]);
+
+  // Foca no primeiro card do carrossel quando as categorias mudam
+  useEffect(() => {
+    if (firstCardRef.current) {
+      firstCardRef.current.focus();
+    }
+  }, [activeCategoryIdx, loading]);
+
+  // ...restante do componente
+
+  return (
+    <div>
+      {/* ... */}
+      <div className="category-selector">
+        {categories.map((cat, idx) => (
+          <div
+            key={cat}
+            className={`category-item${idx === activeCategoryIdx ? ' active-category' : ''}`}
+            tabIndex={0}
+            ref={idx === 0 ? firstCategoryRef : null}
+            onClick={() => setActiveCategoryIdx(idx)}
+          >
+            {cat}
+          </div>
+        ))}
+      </div>
+      <div className='carrousel-all'>
+        {/* ... */}
+        <div className='slider-container'>
+          {loading ? (
+            <div className="movie-card-loading">Carregando...</div>
+          ) : (
+            categories.map((cat, idx) =>
+              idx === activeCategoryIdx ? (
+                <Slider
+                  key={cat}
+                  {...sliderSettings(cat)}
+                  className='SliderMovieCard'
+                >
+                  {movies
+                    .filter(item => item.category === cat)
+                    .map((item, index) => (
+                      <div
+                        key={index}
+                        className={`movie-card${index === (activeSlide[cat] || 0) ? ' movie-card-focused' : ''}`}
+                        tabIndex={0}
+                        ref={index === 0 ? firstCardRef : null}
+                        // onKeyDown...
+                      >
+                        {item.logo && (
+                          <img
+                            src={item.logo}
+                            alt={item.name}
+                            className="movie-card-image"
+                            loading="lazy"
+                          />
+                        )}
+                      </div>
+                    ))}
+                </Slider>
+              ) : null
+            )
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MovieCard;

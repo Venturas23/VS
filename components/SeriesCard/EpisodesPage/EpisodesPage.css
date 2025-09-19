@@ -1,0 +1,59 @@
+.series-backdrop{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    mask:
+   linear-gradient(to right, transparent, black),
+   linear-gradient(to top, transparent, black);
+   -webkit-mask-size:110% 110%;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in;
+}
+.episodes-list{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 70px;
+    margin-top: 20px;
+    
+}
+.episode-card{
+    display: flex;
+    background-color: rgba(165, 1, 1, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    border: none;
+    transition: all 0.3s ease;
+}
+.series-overview{
+    width: 70%;
+    padding-left: 70px;
+    font-size: 18px;
+}
+.series-title{  
+    width: 80%;
+    height: auto;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+.focused{
+    border: solid 3px rgb(0, 174, 255);
+}
+.img_episode{
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+.title_episode{
+    margin-left: 20px;
+    font-size: 30px;
+}

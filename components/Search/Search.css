@@ -1,0 +1,163 @@
+.search-page-container {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30px;
+}
+
+.search-input-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 95%;
+    padding: 15px 20px;
+    font-size: 33px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #333;
+    color: #eee;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.loading-message,
+.no-results-message {
+    color: #aaa;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.search-results-list {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.search-result-item {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 350px; /* Largura do cartão */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 20px;
+    font-size: 22px;
+}
+
+.search-result-item:hover,
+.search-result-item.focused {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid #007bff; /* Borda de foco para teclado */
+}
+
+.search-result-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.search-result-info {
+    padding: 10px;
+    color: #eee;
+}
+
+.search-result-info h3 {
+    margin: 0;
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-type {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #999;
+    margin-top: 5px;
+}
+
+.type-movie {
+    color: #f7b731; /* Cor para filmes */
+}
+
+.type-series {
+    color: #4a90e2; /* Cor para séries */
+}
+/* ... (estilos existentes) ... */
+
+.virtual-keyboard {
+    width: 100%;
+    position: absolute;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    user-select: none;
+    bottom: 60px;
+    left: 500px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.keyboard-button {
+    background-color: #444;
+    color: #eee;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 60px; /* Largura padrão para botões */
+    text-align: center;
+    margin: 3px;
+}
+
+.keyboard-button:hover,
+.keyboard-button.focused {
+    background-color: #555;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.keyboard-button:active {
+    background-color: #333;
+}
+
+/* Tamanhos especiais para botões */
+.keyboard-button:nth-last-child(1) {
+    width: 120px; /* Exemplo para o botão de espaço */
+    margin-right: 10px;
+}
+
+/* Estilo para o input, agora apenas para visualização */
+.search-input {
+    /* ... (estilos existentes) ... */
+    cursor: default;
+}

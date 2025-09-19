@@ -1,0 +1,60 @@
+*{
+    overflow-y: hidden;
+}
+
+.Player{
+    width: 100vw;
+    height: 100vh;
+    --controls: none;
+    aspect-ratio: 16/9;
+    z-index: 1;
+}
+.controls-overlay{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.controls-overlay.show-controls{
+    opacity: 1;
+}
+.controls-overlay.hide-controls {
+    opacity: 0;
+}
+.play-pause-button{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: rgba(129, 129, 129, 0.411);
+    transform: translate(-50%, -50%);
+}
+.play-pause-icon{
+    transform: scale(8);
+}
+.time-media{
+    position: absolute;
+    bottom: 5vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index:2;
+    font-size: 22px;
+}
+.progress-bar-container{
+    position: absolute;
+    bottom: 2vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index:2;
+}
+.progress-bar{
+    width: 94vw;
+    accent-color: rgb(250, 0, 0);
+    opacity: 30% ;
+    transition: opacity 0.3s ease-in-out;
+}
+.progress-bar:hover{
+    opacity: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
